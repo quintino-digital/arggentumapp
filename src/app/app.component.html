@@ -1,3 +1,34 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+
+  <ion-menu *ngIf="true" side="start" menuId="sidemenu" content-id="sidemenu">
+
+    <ion-header>
+
+      <ion-toolbar></ion-toolbar>
+
+    </ion-header>
+
+    <ion-content>
+
+      <ion-list>
+
+        <ion-menu-toggle>
+          <ion-item>
+            <b>Monitoramento Financeiro</b>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item>
+            <b>Configuração</b>
+          </ion-item>
+        </ion-menu-toggle>
+
+      </ion-list>
+
+    </ion-content>
+
+  </ion-menu>
+
+  <ion-router-outlet id="sidemenu"></ion-router-outlet>
 </ion-app>
