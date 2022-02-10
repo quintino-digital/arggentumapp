@@ -5,7 +5,8 @@ import { TabmenuPage } from './tabmenu.page';
 const routes: Routes = [
   { path: "", redirectTo: "/tabmenu/monitoramento", pathMatch: "full" },
   {
-    path: 'tabmenu', component: TabmenuPage, children: [
+    path: 'tabmenu', component: TabmenuPage, children:
+    [
       { path: "monitoramento", children: [ { path: "", loadChildren: () => import("../../page/monitoramento/monitoramento.module").then( module => module.MonitoramentoPageModule) } ] },
       { path: "configuracao", children: [ { path: "", loadChildren: () => import("../../page/configuracao/configuracao.module").then( module => module.ConfiguracaoPageModule) } ] },
     ]
